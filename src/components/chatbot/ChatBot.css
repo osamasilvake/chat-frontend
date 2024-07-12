@@ -12,6 +12,7 @@
 	transition: all 3ms ease;
 }
 
+/* responsive for mobile screen */
 @media (max-width: 490px) {
 	.chatbot {
 		right: 0;
@@ -20,19 +21,23 @@
 		border-radius: 0;
 		width: 100%;
 	}
-	.chatbot .chatbox {
+
+	.chatbot .chatbot_body {
 		height: 90%;
 		padding: 25px 15px 100px;
 	}
+
 	.chatbot .chat-input {
 		padding: 5px 15px;
 	}
+
 	.circle_btn {
 		top: 10px;
 	}
+
 	.circle_btn button {
 		width: 40px;
 		height: 40px;
-		font-size: 1rem;
+		font-size: 1.2rem;
 	}
 }

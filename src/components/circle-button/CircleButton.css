@@ -9,7 +9,7 @@
 	height: 60px;
 	border-radius: 50%;
 	font-size: 1.4rem;
-	background: var(--primary-bg-color);
+	background: var(--header-bg-color);
 	color: var(--main-text-color);
 	border: none;
 }
