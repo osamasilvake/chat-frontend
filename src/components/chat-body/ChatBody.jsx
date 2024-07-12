@@ -1,30 +1,26 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Message from "../message/Message";
 import "./ChatBody.css";
 import ChatFooter from "../chat-footer/ChatFooter";
+import { data } from "./ChatBody.list";
 
 const ChatBody = () => {
 	const [messages, setMessages] = useState(null);
+	const chatboxRef = useRef(null);
 
-	//Note: Dummy array Once we have endpoints then we will remove this
-	const data = [
-		{
-			text: "How can I help you",
-			fromMe: false,
-		},
-		{
-			text: "I want to ask you a question",
-			fromMe: true,
-		},
-	];
+	useEffect(() => {
+		if (chatboxRef.current) {
+			chatboxRef.current.scrollTop = chatboxRef.current.scrollHeight;
+		}
+	}, [messages]);
 
 	useEffect(() => {
 		setMessages(data);
 	}, []);
 
 	return (
-		<>
-			<ul className="chatbot_body">
+		<div>
+			<ul className="chatbot_body" ref={chatboxRef}>
 				{messages?.map((data, index) => (
 					<Message message={data} key={index} />
 				))}
@@ -32,7 +28,7 @@ const ChatBody = () => {
 			<div>
 				<ChatFooter messages={messages} setMessages={setMessages} />
 			</div>
-		</>
+		</div>
 	);
 };
 
