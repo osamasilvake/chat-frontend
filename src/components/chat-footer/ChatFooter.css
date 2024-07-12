@@ -34,3 +34,8 @@
 .chat-input input:valid ~ span {
 	visibility: visible;
 }
+
+.chat-input button:disabled {
+	opacity: 0.2;
+	color: var(--disabled-btn-color);
+}

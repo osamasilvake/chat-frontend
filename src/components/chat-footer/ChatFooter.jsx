@@ -1,11 +1,38 @@
+import { useState } from "react";
 import "./ChatFooter.css";
 
-const ChatFooter = () => {
+const ChatFooter = (props) => {
+	const { setMessages, messages } = props;
+	const [text, setText] = useState("");
+
+	const onChangeHandler = (value) => {
+		setText(value);
+	};
+
+	const submitHandler = (event) => {
+		event.preventDefault();
+		const data = {
+			fromMe: true,
+			text: text,
+		};
+		setMessages([...messages, data]);
+		setText("");
+	};
+
 	return (
-		<div className="chat-input">
-			<input type="text" placeholder="Enter a message..." spellCheck="false" required />
-			<button type="submit">➤</button>
-		</div>
+		<form className="chat-input" onSubmit={submitHandler}>
+			<input
+				type="text"
+				placeholder="Enter a message..."
+				spellCheck="false"
+				required
+				value={text}
+				onChange={(e) => onChangeHandler(e.target.value)}
+			/>
+			<button type="submit" disabled={!text}>
+				➤
+			</button>
+		</form>
 	);
 };
 

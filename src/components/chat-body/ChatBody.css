@@ -18,9 +18,9 @@
 	text-align: center;
 	font-size: 1.4rem;
 	color: rgb(198, 190, 190);
-	line-height: 32px;
 	align-self: flex-end;
-	margin: 0 10px 7px 0;
+	margin: 0 10px 2px 0;
+	line-height: 32px;
 }
 
 .chatbot_body .chat p {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Message from "../message/Message";
 import "./ChatBody.css";
-import { FaRocketchat } from "react-icons/fa";
+import ChatFooter from "../chat-footer/ChatFooter";
 
 const ChatBody = () => {
 	const [messages, setMessages] = useState(null);
@@ -17,16 +17,22 @@ const ChatBody = () => {
 			fromMe: true,
 		},
 	];
+
 	useEffect(() => {
 		setMessages(data);
 	}, []);
 
 	return (
-		<ul className="chatbot_body">
-			{messages?.map((data, index) => (
-				<Message message={data} key={index} />
-			))}
-		</ul>
+		<>
+			<ul className="chatbot_body">
+				{messages?.map((data, index) => (
+					<Message message={data} key={index} />
+				))}
+			</ul>
+			<div>
+				<ChatFooter messages={messages} setMessages={setMessages} />
+			</div>
+		</>
 	);
 };
 
