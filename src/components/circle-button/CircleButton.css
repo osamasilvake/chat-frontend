@@ -1,15 +1,16 @@
-.toggle_btn {
+.circle_btn {
 	position: fixed;
 	bottom: 25px;
 	right: 20px;
 }
 
-.toggle_btn button {
+.circle_btn button {
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
 	font-size: 1.4rem;
-	background: #724ae8;
+	background: var(--primary-bg-color);
+	color: var(--main-text-color);
 	border: none;
 }
 

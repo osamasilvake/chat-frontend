@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ButtonCircle from "../../components/ButtonCircle";
-import ChatBot from "../../components/ChatBot";
+import CircleButton from "../../components/circle-button/CircleButton";
+import ChatBot from "../../components/chatbot/ChatBot";
 
 function Chat() {
 	const [modalOpen, setModalOpen] = useState(false);
@@ -13,7 +13,7 @@ function Chat() {
 		<>
 			<div>{modalOpen && <ChatBot />}</div>
 			<div>
-				<ButtonCircle toggleModal={toggleModal} modalOpen={modalOpen} />
+				<CircleButton toggleModal={toggleModal} modalOpen={modalOpen} />
 			</div>
 		</>
 	);

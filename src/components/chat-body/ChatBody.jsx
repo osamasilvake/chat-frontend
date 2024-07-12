@@ -5,7 +5,9 @@ const ChatBody = () => {
 	return (
 		<ul className="chatbot_body">
 			<li className="chat incoming">
-				<span className="material-symbols-outlined">smart_toy</span>
+				<span>
+					<FaRocketchat />
+				</span>
 				<p>
 					Hi there 👋
 					<br />
@@ -20,7 +22,9 @@ const ChatBody = () => {
 				</p>
 			</li>
 			<li className="chat incoming">
-				<span className="material-symbols-outlined">smart_toy</span>
+				<span>
+					<FaRocketchat />
+				</span>
 				<p>
 					Hi there 👋
 					<br />

@@ -1,10 +1,10 @@
-import "./ButtonCircle.css";
+import "./CircleButton.css";
 
-const ButtonCircle = (props) => {
+const CircleButton = (props) => {
 	const { toggleModal, modalOpen } = props;
 
 	return (
-		<div className="toggle_btn">
+		<div className="circle_btn">
 			<button onClick={toggleModal} className={modalOpen ? "" : "spin-animation"}>
 				{modalOpen ? "✖" : "💬"}
 			</button>
@@ -12,4 +12,4 @@ const ButtonCircle = (props) => {
 	);
 };
 
-export default ButtonCircle;
+export default CircleButton;

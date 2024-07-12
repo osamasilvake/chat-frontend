@@ -4,9 +4,9 @@
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	background: #fff;
+	background: var(--chatbot-bg-color);
 	padding: 3px 20px;
-	border-top: 1px solid #ddd;
+	border-top: 1px solid var(--footer-border-color);
 }
 
 .chat-input input {
@@ -22,8 +22,8 @@
 
 .chat-input button {
 	align-self: center;
-	color: #724ae8;
-	background: #fff;
+	color: var(--chatbot-btn-color);
+	background: var(--chatbot-bg-color);
 	cursor: pointer;
 	height: 40px;
 	width: 40px;
