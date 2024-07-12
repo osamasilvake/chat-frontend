@@ -1,5 +1,4 @@
-import "./App.css";
-import Chat from "./screen/Chat";
+import Chat from "./screens/chat/Chat";
 
 function App() {
 	return <Chat />;

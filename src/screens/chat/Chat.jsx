@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ButtonCircle from "../components/ButtonCircle";
-import ChatBot from "../components/ChatBot";
+import ButtonCircle from "../../components/ButtonCircle";
+import ChatBot from "../../components/ChatBot";
 
 function Chat() {
 	const [modalOpen, setModalOpen] = useState(false);
@@ -10,12 +10,12 @@ function Chat() {
 	};
 
 	return (
-		<div>
-			{modalOpen && <ChatBot />}
+		<>
+			<div>{modalOpen && <ChatBot />}</div>
 			<div>
 				<ButtonCircle toggleModal={toggleModal} modalOpen={modalOpen} />
 			</div>
-		</div>
+		</>
 	);
 }
 

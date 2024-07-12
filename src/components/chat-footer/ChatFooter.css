@@ -1,0 +1,36 @@
+.chatbot .chat-input {
+	display: flex;
+	gap: 5px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: #fff;
+	padding: 3px 20px;
+	border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+	height: 55px;
+	width: 100%;
+	border: none;
+	outline: none;
+	resize: none;
+	max-height: 180px;
+	padding: 15px 15px 15px 0;
+	font-size: 0.95rem;
+}
+
+.chat-input button {
+	align-self: center;
+	color: #724ae8;
+	background: #fff;
+	cursor: pointer;
+	height: 40px;
+	width: 40px;
+	font-size: 1.35rem;
+	border: none;
+}
+
+.chat-input input:valid ~ span {
+	visibility: visible;
+}

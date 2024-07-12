@@ -1,0 +1,32 @@
+.toggle_btn {
+	position: fixed;
+	bottom: 25px;
+	right: 20px;
+}
+
+.toggle_btn button {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	font-size: 1.4rem;
+	background: #724ae8;
+	border: none;
+}
+
+.toggle_btn button:hover {
+	transform: scale(1.1);
+}
+
+.spin-animation {
+	animation: spin 0.5s ease-in-out forwards;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}

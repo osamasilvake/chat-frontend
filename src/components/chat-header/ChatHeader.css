@@ -1,0 +1,14 @@
+.chatbot header {
+	display: flex;
+	padding: 16px 20px;
+	justify-content: space-between;
+	position: relative;
+	text-align: center;
+	color: #fff;
+	background: #4ae891;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+	font-size: 1.4rem;
+}
