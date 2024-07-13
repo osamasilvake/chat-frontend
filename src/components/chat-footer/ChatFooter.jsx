@@ -23,7 +23,7 @@ const ChatFooter = (props) => {
 		<form className="chat-input" onSubmit={submitHandler}>
 			<input
 				type="text"
-				placeholder="Enter a message..."
+				placeholder="Enter a message"
 				spellCheck="false"
 				required
 				value={text}

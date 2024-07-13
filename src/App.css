@@ -1,0 +1,17 @@
+:root {
+	--main-bg-color: #e3f2fd;
+	--main-text-color: white;
+	--primary-bg-color: #24d172;
+	--chatbot-bg-color: #fff;
+	--header-bg-color: #4ae891;
+	--footer-border-color: #ddd;
+	--chatbot-btn-color: #4ae891;
+	--incoming-text-color: #000;
+	--incoming_msg-bg-color: #f2f2f2;
+	--scrollbar-thumb-bg-color: #ccc;
+	--disabled-btn-color: red;
+}
+
+body {
+	background-color: var(--main-bg-color);
+}
