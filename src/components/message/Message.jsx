@@ -1,3 +1,4 @@
+import "./Message.css";
 import { FaRocketchat } from "react-icons/fa";
 
 const Message = ({ message }) => {
