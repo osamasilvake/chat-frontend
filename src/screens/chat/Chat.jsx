@@ -11,7 +11,7 @@ function Chat() {
 
 	return (
 		<>
-			<div>{modalOpen && <ChatBot />}</div>
+			<div>{modalOpen && <ChatBot toggleModal={toggleModal} modalOpen={modalOpen} />}</div>
 			<div>
 				<CircleButton toggleModal={toggleModal} modalOpen={modalOpen} />
 			</div>

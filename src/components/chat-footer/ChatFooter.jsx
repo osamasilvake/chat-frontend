@@ -29,7 +29,7 @@ const ChatFooter = (props) => {
 				value={text}
 				onChange={(e) => onChangeHandler(e.target.value)}
 			/>
-			<button type="submit" disabled={!text.trim()}>
+			<button type="submit" aria-label="Send message" disabled={!text.trim()}>
 				➤
 			</button>
 		</form>
