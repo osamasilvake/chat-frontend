@@ -3,14 +3,14 @@ import { FaRocketchat } from "react-icons/fa";
 const Message = ({ message }) => {
 	return (
 		<div>
-			<li className="chat incoming">
-				<span>
+			<li className="flex list-none mb-4">
+				<span className="text-center leading-8 self-end text-xl mb-2 mx-2 text-gray-400">
 					<FaRocketchat />
 				</span>
-				<p>{message.text}</p>
+				<p className="bg-gray-100 rounded py-2 px-2">{message.text}</p>
 			</li>
-			<li className="chat outgoing">
-				<p>{message.text}</p>
+			<li className="flex mb-4 justify-end">
+				<p className=" bg-green-200 rounded py-2 px-2">{message.text}</p>
 			</li>
 		</div>
 	);

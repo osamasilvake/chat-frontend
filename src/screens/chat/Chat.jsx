@@ -3,7 +3,7 @@ import CircleButton from "../../components/circle-button/CircleButton";
 import ChatBot from "../../components/chatbot/ChatBot";
 
 function Chat() {
-	const [modalOpen, setModalOpen] = useState(false);
+	const [modalOpen, setModalOpen] = useState(true);
 
 	const toggleModal = () => {
 		setModalOpen(!modalOpen);
@@ -11,10 +11,10 @@ function Chat() {
 
 	return (
 		<>
-			<div>{modalOpen && <ChatBot />}</div>
-			<div>
+			<div>{modalOpen && <ChatBot toggleModal={toggleModal} modalOpen={modalOpen} />}</div>
+			{/* <div>
 				<CircleButton toggleModal={toggleModal} modalOpen={modalOpen} />
-			</div>
+			</div> */}
 		</>
 	);
 }
