@@ -2,17 +2,24 @@ import { FaRocketchat } from "react-icons/fa";
 
 const Message = ({ message }) => {
 	return (
-		<div>
-			<li className="flex list-none mb-4">
+		<li
+			className={`flex list-none my-4 ${
+				message.fromMe ? "flex justify-end" : "flex justify-start"
+			}`}
+		>
+			{!message.fromMe && (
 				<span className="text-center leading-8 self-end text-xl mb-2 mx-2 text-gray-400">
 					<FaRocketchat />
 				</span>
-				<p className="bg-gray-100 rounded py-2 px-2">{message.text}</p>
-			</li>
-			<li className="flex mb-4 justify-end">
-				<p className=" bg-green-200 rounded py-2 px-2">{message.text}</p>
-			</li>
-		</div>
+			)}
+			<p
+				className={`rounded py-2 px-2 ${
+					message.fromMe ? " bg-green-200" : " bg-slate-300"
+				}`}
+			>
+				{message.text}
+			</p>
+		</li>
 	);
 };
 
