@@ -21,7 +21,6 @@
 
 	.chatbot .chatbot_body {
 		padding: 25px 15px 100px;
-		height: calc(100vh - 2rem);
 	}
 
 	.chatbot .chat-input {

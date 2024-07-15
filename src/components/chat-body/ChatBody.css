@@ -1,6 +1,6 @@
 .chatbot .chatbot_body {
 	overflow-y: auto;
-	height: calc(100vh - 8.2rem);
+	height: 74vh;
 	padding: 30px 20px 100px;
 }
 
