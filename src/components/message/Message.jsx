@@ -3,17 +3,14 @@ import { FaRocketchat } from "react-icons/fa";
 
 const Message = ({ message }) => {
 	return (
-		<div>
-			<li className="chat incoming">
+		<li className={`chat ${message.fromMe ? "outgoing" : "incoming"}`}>
+			{!message.fromMe && (
 				<span>
 					<FaRocketchat />
 				</span>
-				<p>{message.text}</p>
-			</li>
-			<li className="chat outgoing">
-				<p>{message.text}</p>
-			</li>
-		</div>
+			)}
+			<p>{message.text}</p>
+		</li>
 	);
 };
 
