@@ -4,14 +4,13 @@ import Message from "../../components/message/Message";
 
 function Chat() {
 	const [modalOpen, setModalOpen] = useState(false);
+	const [messages, setMessages] = useState([]);
+	const scrollRef = useRef(null);
+	const [text, setText] = useState("");
 
 	const toggleModal = () => {
 		setModalOpen(!modalOpen);
 	};
-
-	const [messages, setMessages] = useState([]);
-	const scrollRef = useRef(null);
-	const [text, setText] = useState("");
 
 	const onChangeHandler = (value) => {
 		setText(value);
@@ -38,13 +37,13 @@ function Chat() {
 	}, []);
 
 	return (
-		<div className="">
+		<div className="relative">
 			{modalOpen && (
-				<div className="bg-slate-100 max-w-96 border-2 m-4  shadow-sm">
+				<div className="bg-slate-100 max-w-96 border-2 m-4 shadow-sm">
 					<header className=" bg-green-400 py-2 px-2">
 						<h1 className="text-white text-lg">chatgpt</h1>
 					</header>
-					<div className="h-[70vh] overflow-auto" ref={scrollRef}>
+					<div className="h-[60vh] overflow-auto" ref={scrollRef}>
 						<ul className="px-3">
 							{messages.map((message) => (
 								<Message message={message} key={message.id} />
@@ -59,13 +58,20 @@ function Chat() {
 							placeholder="Enter message"
 							type="text"
 						/>
-						<button className="px-4 bg-white" type="submit" disabled={!text.trim()}>
+						<button
+							className="px-4 bg-white text-green-500 disabled:text-green-200"
+							type="submit"
+							disabled={!text.trim()}
+						>
 							➤
 						</button>
 					</form>
 				</div>
 			)}
-			<button className="mt-3 mx-3 bg-green-400 rounded-full h-12 w-12" onClick={toggleModal}>
+			<button
+				className="fixed bottom-16 left-4 bg-green-400 rounded-full h-12 w-12"
+				onClick={toggleModal}
+			>
 				{modalOpen ? "✖" : "💬"}
 			</button>
 		</div>
